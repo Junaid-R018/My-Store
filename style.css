@@ -1,0 +1,237 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+}
+
+header {
+    background: #ffcc00;
+    padding: 20px 0;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li {
+    margin: 0 20px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #333;
+    font-size: 18px;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #fff;
+}
+
+.section {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+h1,
+h2 {
+    margin-bottom: 20px;
+}
+
+p {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.product-grid {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+}
+/* Section Styling */
+.section {
+  padding: 50px 20px;
+  text-align: center;
+  position: relative;   /* Allows positioning of elements over the image */
+}
+
+/* Full-width image */
+.medicine-item img {
+  width: 100%;         /* Full width of the viewport */
+  height: auto;        /* Maintain the aspect ratio */
+  display: block;      /* Remove inline element gaps */
+  object-fit: cover;   /* Ensures the image covers the full width without distortion */
+}
+
+/* Text over the image */
+.medicine-item {
+  position: relative;  /* Allows absolute positioning of the text */
+}
+
+.medicine-item p {
+  position: absolute;  /* Position the text over the image */
+  top: 50%;            /* Center vertically */
+  left: 50%;           /* Center horizontally */
+  transform: translate(-50%, -50%);  /* Fine-tune centering */
+  color: #fff;         /* White text for better contrast */
+  font-size: 1.5rem;   /* Adjust font size */
+  background: rgba(0, 0, 0, 0.5); /* Semi-transparent background for better readability */
+  padding: 10px 20px;  /* Add padding around the text */
+  border-radius: 5px;  /* Slight rounding of the background edges */
+}
+
+/* Responsive styling */
+@media (max-width: 768px) {
+  .medicine-item p {
+    font-size: 1.2rem;  /* Smaller font on mobile */
+  }
+}
+
+/* WhatsApp Floating Button */
+.whatsapp-float {
+    position: fixed;
+    /* Fixed position */
+    bottom: 20px;
+    /* Position 20px from the bottom */
+    right: 20px;
+    /* Position 20px from the right */
+    width: 60px;
+    /* Width of the button */
+    height: 60px;
+    /* Height of the button */
+    background-color: #25D366;
+    /* WhatsApp green color */
+    border-radius: 50%;
+    /* Make it a circle */
+    display: flex;
+    /* Flexbox for centering the icon */
+    justify-content: center;
+    /* Center horizontally */
+    align-items: center;
+    /* Center vertically */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    /* Subtle shadow */
+    z-index: 100;
+    /* Ensure it stays on top */
+    transition: transform 0.3s ease-in-out;
+    /* Smooth animation on hover */
+}
+
+.whatsapp-float:hover {
+    transform: scale(1.1);
+    /* Enlarge slightly on hover */
+}
+
+.whatsapp-float img {
+    width: 100%;
+    /* Image takes full width */
+    height: 100%;
+    /* Image takes full height */
+    border-radius: 50%;
+    /* Make the image circular */
+}
+
+/* Responsive for smaller screens */
+@media (max-width: 768px) {
+    .whatsapp-float {
+        width: 50px;
+        /* Reduce size on smaller screens */
+        height: 50px;
+        bottom: 15px;
+        /* Adjust position for smaller screens */
+        right: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .whatsapp-float {
+        width: 45px;
+        /* Further reduce size for very small screens */
+        height: 45px;
+    }
+}
+
+.product-item {
+    max-width: 300px;
+    text-align: center;
+}
+
+.product-item img,
+.medicine-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.animated-img {
+    animation: zoomIn 1s ease-in-out forwards;
+}
+
+@keyframes zoomIn {
+    0% {
+        transform: scale(0.5);
+        opacity: 0;
+    }
+
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 500px;
+    margin: auto;
+}
+
+form input,
+form textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 2px solid #ffcc00;
+    border-radius: 5px;
+}
+
+form button {
+    background-color: #ffcc00;
+    border: none;
+    padding: 10px 20px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+form button:hover {
+    background-color: #333;
+    color: #fff;
+}
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+
+    .product-grid,
+    .medicines-grid {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
